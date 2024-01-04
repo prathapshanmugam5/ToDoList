@@ -14,13 +14,21 @@
             <div class="col">
 
                 <div>
-                    
                     <input type="text" name="description" formControlName="description" class="form-control ms-5 me-5" placeholder="Write your daily task here....">
-                </div>
+                  
+                    <!-- Display validation error message for required -->
+                    <div *ngIf="FormOne.get('description')?.errors?.['required'] && FormOne.get('description')?.touched"
+                         class="text-danger">
+                      Description is required.
+                    </div>
+                  
+                   
+                  </div>
+                  
             </div>
             <div class="col-2">
                 <div>
-                    <button (click)="postData()" class="btn btn-primary">Add Task </button>
+                    <button (click)="FormOne.valid && postData()" class="btn btn-primary">Add Task </button>
                 </div>
             
 

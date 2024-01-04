@@ -18,7 +18,6 @@ db.connection.once('open',()=>{
 });
 
 const List=db.model('list',new db.Schema({
-    title:String,
     description:String,
     date:String
 

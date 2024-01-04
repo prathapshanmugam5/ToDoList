@@ -1,12 +1,29 @@
-<div *ngIf="list" class="custom-container">
-    <div class="custom-content">
-        <!-- Uncomment the following line if you want to display the title -->
-        <!-- <h5 class="custom-title">{{ list.title }}</h5> -->
-        <p class="custom-text">{{ list.description }}</p>
-        <p class="custom-text">{{list.date}}</p>
+<!-- <div class="center-container">
+    <div *ngIf="list" class="custom-container">
+        <div class="card" style="margin-top: 200px;">
+            <div class="custom-content">
+                <p class="custom-text">{{ list.description }}</p>
+                <p class="custom-text">{{list.date}}</p>
+            </div>
+            <div class="custom-footer">
+                <button (click)="back()" class="btn btn-secondary">Back</button>
+            </div>
+        </div>
     </div>
-    <div class="custom-footer">
-        <button (click)="back()" class="btn btn-secondary">Back</button>
+</div> -->
+
+
+<div class="center-container">
+    <div *ngIf="list" class="custom-container">
+        <div class="card" style="margin-bottom:100px;">
+            <div class="custom-content">
+                <p class="custom-text">{{ list.description }}</p>
+            </div>
+            <div class="custom-footer">
+                <p class="custom-text" style="margin-right: 10px;">{{list.date}}</p>
+                <button (click)="back()" class="btn btn-secondary">Back</button>
+            </div>
+        </div>
     </div>
 </div>
 
